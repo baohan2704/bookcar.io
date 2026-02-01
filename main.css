@@ -358,7 +358,7 @@ body {
   padding: 20px 22px;
   font-size: 1rem;
   border-radius: 16px;
-  /* background: rgba(62, 59, 59, 0.236); */
+  background: rgba(62, 59, 59, 0.236);
   color: var(--primary-text-form);
   outline: none;
   object-fit: cover;
