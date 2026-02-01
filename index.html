@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vinfast Limo Green | Limo Booking</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body class="overflow-x-hidden">
+    <div class="spotlight"></div>
+
+    <!-- ================= HEADER ================= -->
+    <nav class="fixed top-0 w-full z-50 px-6 py-4">
+      <div
+        class="max-w-7xl mx-auto header-flat rounded-2xl px-8 py-4 flex items-center justify-between"
+      >
+        <span class="text-xl font-extrabold uppercase">
+          Vinfast <span class="text-primary">Limo Green</span></span
+        >
+
+        <ul class="hidden md:flex gap-8 font-semibold">
+          <li><a href="#hero" class="nav-link">Trang chủ</a></li>
+          <li><a href="#services" class="nav-link">Dịch vụ</a></li>
+          <li><button class="nav-link" onclick="showForm('booking')">Đặt xe</button></li>
+          <li><a href="#contact" class="nav-link">Liên hệ</a></li>
+        </ul>
+
+        <button id="themeToggle" class="theme-switch-btn">
+          <div id="themeCircle" class="theme-switch-circle">
+            <i class="fa-solid fa-moon"></i>
+          </div>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+    <section id="hero" class="hero-split">
+      <div class="hero-text">
+        <div class="uiverse-badge mb-6">Vinfast VF9 Limo 7 chỗ</div>
+
+        <h1 class="hero-title">
+          Xanh hơn<br />
+          <span>Tiết kiệm hơn</span>
+        </h1>
+
+        <p class="hero-sub">
+          Trải nghiệm di chuyển êm ái với dòng xe điện cao cấp, nội thất thương
+          gia tại Cần Thơ.
+        </p>
+
+        <button class="hero-btn" onclick="showForm('booking')">
+          ĐẶT XE NGAY
+        </button>
+      </div>
+
+      <div class="hero-image">
+        <img src="https://vinfastotominhdao.vn/wp-content/uploads/Limo-green-2.jpg" alt="Vinfast Limo" />
+      </div>
+    </section>
+
+    <!-- ================= SERVICES ================= -->
+    <section id="services" class="px-6 py-32">
+      <!-- FLOATING BUTTON -->
+      <div class="floating-btn">
+        <div class="phone-btn">
+        <a href="tel:0900000000" class="phone-vr" title="Tư vấn ngay"><i class="fa-solid fa-phone"></i></a>
+      </div>
+      <div class="zalo-btn">
+        <a href="https://zalo.me/0900000000" class="zalo-vr" title="Liên hệ Zalo"> 
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo"></a>
+      </div>
+      </div>
+      
+      <div class="max-w-7xl mx-auto text-center mb-20">
+        <h2 class="text-5xl font-black mb-4 text-primary">Ưu điểm</h2>
+        <p class="text-sub text-lg">
+          Mỗi hành trình là một trải nghiệm sang trọng & bền vững
+        </p>
+      </div>
+
+      <div class="services-zigzag max-w-7xl mx-auto">
+        <div class="feature-slider-wrapper">
+          <button id="prev" class="slider-arrow left">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+
+          <div class="feature-viewport">
+            <div class="feature-track">
+              <div class="feature-card">
+                <div class="icon-box"><i class="fa-solid fa-bolt"></i></div>
+                <h3>Nhanh chóng, tiện lợi</h3>
+                <p>Tình trạng xe luôn sẵn sàng, thủ tục đơn giản.</p>
+              </div>
+
+              <div class="feature-card">
+                <div class="icon-box"><i class="fa-solid fa-tags"></i></div>
+                <h3>Chi phí hấp dẫn</h3>
+                <p>Chi phí hợp lý, đã bao gồm bảo dưỡng, không phát sinh.</p>
+              </div>
+
+              <div class="feature-card">
+                <div class="icon-box"><i class="fa-solid fa-credit-card"></i></div>
+                <h3>Thanh toán dễ dàng</h3>
+                <p>Hỗ trợ nhiều phương thức thanh toán tiện lợi.</p>
+              </div>
+
+              <div class="feature-card">
+                <div class="icon-box"><i class="fa-solid fa-battery-full"></i></div>
+                <h3>Pin vượt trội</h3>
+                <p>60.13kWh – di chuyển đến 450km, sạc nhanh DC 30 phút.</p>
+              </div>
+
+              <div class="feature-card">
+                <div class="icon-box"><i class="fa-solid fa-couch"></i></div>
+                <h3>Nội thất cao cấp</h3>
+                <p>7 chỗ rộng rãi, màn hình 10.1", điều hòa tự động.</p>
+              </div>
+
+              <div class="feature-card">
+                <div class="icon-box"><i class="fa-solid fa-headset"></i></div>
+                <h3>Dịch vụ tận tâm</h3>
+                <p>Tư vấn nhiệt tình, hỗ trợ 24/7, luôn sẵn sàng.</p>
+              </div>
+            </div>
+          </div>
+          <button id="next" class="slider-arrow right">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+        <div class="text-center">
+          <h2 class="text-5xl font-black mb-4">
+            Dịch vụ <span class="text-primary">thuê xe</span>
+          </h2>
+          <p class="text-sub text-lg">Xe luôn sẵn sàng, tài xế tận tâm, chu đáo. An Toàn trong suốt chuyến đi.</p>
+        </div>
+        <!-- PRICE BUTTON -->
+        <button class="price-btn" onclick="showTable('price-table')">
+              BẢNG GIÁ
+        </button>
+
+        <div class="service-item ">
+          <button onclick="showForm('booking')">
+            <div class="service-card">
+              <img src="https://cdn.baohatinh.vn/images/a3c3178e943521c56475fd02a2c76452ae6f03b50136c43cbb4e74f25d5b628a41f223de23b24ca6aa5fceb6eeab1c3e/a1.jpg" />
+              <div class="service-content">
+                <h3>Thuê Xe Liên Tỉnh</h3>
+                <p>Đi du lịch cùng gia đình.</p>
+              </div>
+            </div>
+          </button>
+          <button onclick="showForm('booking')">
+            <div class="service-card">
+              <img src="https://gialainews.com/wp-content/uploads/2025/07/Limo-Green-Mau-MPV-7-cho-dau-tien-cua-VinFast.jpg" />
+              <div class="service-content">
+                <h3>Thuê Xe Nội Thành</h3>
+                <p>Chủ động lịch trình, linh hoạt và tiện lợi.</p>
+              </div>
+            </div>
+          </button>
+        </div>
+        <div class="text-center">
+          <h2 class="text-5xl font-black mb-4">
+            Dịch vụ <span class="text-primary">đặt xe</span>
+          </h2>
+          <p class="text-sub text-lg">Thuê xe theo NGÀY, THÁNG. Thủ tục đơn giản, nhanh chóng.</p>
+        </div>
+
+        <!-- PRICE BUTTON -->
+        <button class="price-btn" onclick="showTable('price-table')">
+              BẢNG GIÁ
+        </button>
+
+        <div class="service-item left reveal-x-left car-grid">
+          <button onclick="showForm('booking')">
+            <div class="service-card">
+              <img src="https://vinfastotominhdao.vn/wp-content/uploads/Limo-Green-mau-bac-1110x581.png" />
+              <div class="service-content">
+                <h3>Limo Green - <span style="color: gray;">Bạc</span></h3>
+              </div>
+            </div>
+          </button>
+          <button onclick="showForm('booking')">
+            <div class="service-card">
+              <img src="https://vinfastotominhdao.vn/wp-content/uploads/Limo-Green-mau-vang-1110x581.png" />
+              <div class="service-content">
+                <h3>Limo Green - <span style="color: rgb(206, 206, 3);">Vàng</span></h3>
+              </div>
+            </div>
+          </button>    
+          <button onclick="showForm('booking')">
+            <div class="service-card">
+              <img src="https://vinfastotominhdao.vn/wp-content/uploads/Limo-Green-mau-do-1110x581.png" />
+              <div class="service-content">
+                <h3>Limo Green - <span style="color: red;">Đỏ</span></h3>
+              </div>
+            </div>
+          </button>
+          <button onclick="showForm('booking')">
+            <div class="service-card">
+              <img src="https://vinfastotominhdao.vn/wp-content/uploads/Limo-Green-mau-den-1110x581.png" />
+              <div class="service-content">
+                <h3>Limo Green - <span>Đen</span></h3>
+              </div>
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BOOKING ================= -->
+    <div id="booking" class="modal">
+      <div class="modal-overlay" onclick="closeForm()"></div>
+      <div class="modal-content form-container-flat p-12">
+        <button class="modal-close" onclick="closeForm()">✕</button>
+        <h2 class="text-4xl font-black text-center mb-12">Đặt Xe</h2>
+        <form id="bookingForm" action="" method="post" class="grid md:grid-cols-2 gap-8">
+          <div class="space-y-2">
+            <label class="text-sm font-semibold"
+              ><i class="fa-solid fa-location-dot mr-2"></i>Điểm đón <span class="text-red-500">*</span></label>
+            <input
+              required
+              type="text"
+              class="input_order"
+              placeholder="Địa chỉ đón khách"
+            />
+          </div>
+
+          <div class="space-y-2">
+            <label class="text-sm font-semibold"
+              ><i class="fa-solid fa-location-dot mr-2"></i>Điểm đến <span class="text-red-500">*</span></label>
+            <input
+              required
+              type="text"
+              class="input_order"
+              placeholder="Nơi bạn muốn tới"
+            />
+          </div>
+
+          <div class="space-y-2">
+            <label class="text-sm font-semibold"
+              ><i class="fa-solid fa-calendar mr-2"></i>Ngày đi <span class="text-red-500">*</span></label>
+            <input id="startDate" required type="date" class="input_order" />
+          </div>
+
+          <div class="space-y-2">
+            <label class="text-sm font-semibold"
+              ><i class="fa-solid fa-calendar mr-2"></i>Ngày về <span class="text-red-500">*</span></label>
+            <input id="endtDate" required type="date" class="input_order" />
+          </div>
+
+          <div class="space-y-2">
+            <label class="text-sm font-semibold"
+              ><i class="fa-solid fa-clock mr-2"></i>Giờ đi <span class="text-red-500">*</span></label>
+            <input required type="time" class="input_order" />
+          </div>
+
+          <div class="space-y-2">
+            <label class="text-sm font-semibold"
+              ><i class="fa-solid fa-user mr-2"></i>Họ tên <span class="text-red-500">*</span></label>
+            <input
+              required
+              type="text"
+              class="input_order"
+              placeholder="Tên khách hàng"
+            />
+          </div>
+
+          <div class="space-y-2">
+            <label class="text-sm font-semibold"
+              ><i class="fa-solid fa-phone mr-2"></i>Số điện thoại <span class="text-red-500">*</span></label>
+            <input required id="phoneNum" type="tel" class="input_order" placeholder="Số liên hệ" />
+          </div>
+
+          <div class="space-y-2">
+            <label class="text-sm font-semibold">
+              <i class="fa-solid fa-car mr-2"></i>Màu xe mong muốn </label>
+            <select class="input_order ">
+              <option value="black">Đen</option>
+              <option value="red">Đỏ</option>
+              <option value="gray">Xám</option>
+              <option value="yellow">Vàng</option>
+            </select>
+          </div>
+
+          <button type="button" class="hero-btn md:col-span-2 mt-4">
+            XÁC NHẬN HÀNH TRÌNH
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- ================= PRICE-TABLE ================= -->
+    <div id="price-table" class="modal">
+      <div class="modal-overlay" onclick="closeTable()"></div>
+
+        <div class="modal-content price form-container-flat p-12">
+          <button class="modal-close" onclick="closeTable()">✕</button>
+          <h2 class="text-4xl font-black text-center mb-12">Thông Tin Bảng Giá</h2>
+          <div class="overflow-x-auto rounded-2xl border border-[var(--border)]">
+          <table class="min-w-full text-sm bg-[var(--card)] text-center">
+
+            <!-- ===== THUÊ XE LIÊN TỈNH ===== -->
+            <thead>
+              <tr class="bg-[var(--primary)] text-white">
+                <th colspan="5" class="px-4 py-3 text-left font-bold text-base">
+                  Thuê Xe Liên Tỉnh
+                </th>
+              </tr>
+              <tr class="bg-[var(--primary-light)] text-black font-semibold">
+                <th class="px-3 py-2 text-left">Hành trình</th>
+                <th class="px-3 py-2">Km</th>
+                <th class="px-3 py-2">1 ngày</th>
+                <th class="px-3 py-2">2 ngày</th>
+                <th class="px-3 py-2">Trên 2 ngày</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[var(--border)]">
+              <tr>
+                <td class="px-3 py-2 text-left font-medium">Cà Mau</td>
+                <td>~150</td>
+                <td>600k</td>
+                <td>1.100k</td>
+                <td rowspan="3" class="px-3 py-2 text-left font-medium italic text-center">
+                  Liên hệ để báo giá tốt nhất
+                </td>
+              </tr>
+              <tr>
+                <td class="px-3 py-2 text-left font-medium">Hậu Giang</td>
+                <td>~40</td>
+                <td>230k</td>
+                <td>400k</td> 
+              </tr>
+              <tr>
+                <td class="px-3 py-2 text-left font-medium">Vĩnh Long</td>
+                <td>~65</td>
+                <td>300k</td>
+                <td>550k</td>
+              </tr>
+            </tbody>
+
+            <!-- ===== THUÊ XE NỘI THÀNH ===== -->
+            <thead>
+              <tr class="bg-[var(--primary)] text-white">
+                <th colspan="5" class="px-4 py-3 text-left font-bold text-base">
+                  Thuê Xe Nội Thành
+                </th>
+              </tr>
+              <tr class=" bg-[var(--primary-light)] text-black font-semibold">
+                <th class="px-3 py-2 text-left">Quãng đường</th>
+                <th class="px-3 py-2">1 ngày</th>
+                <th class="px-3 py-2">2 ngày</th>
+                <th colspan="2" class="px-3 py-2">Trên 2 ngày</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[var(--border)]">
+              <tr>
+                <td class="px-3 py-2 text-left font-medium">Dưới 50km</td>
+                <td>380k</td>
+                <td>700k</td>
+                <td rowspan="3" colspan="4" class="px-3 py-2 text-left font-medium italic text-center">
+                  Liên hệ để báo giá tốt nhất
+                </td>
+              </tr>
+              <tr>
+                <td class="px-3 py-2 text-left font-medium">Dưới 100km</td>
+                <td>450k</td>
+                <td>800k</td>
+              </tr>
+              <tr>
+                <td class="px-3 py-2 text-left font-medium">Trên 100km</td>
+                <td>550k</td>
+                <td>900k</td>
+              </tr>
+            </tbody>
+
+            <!-- ĐẶT XE-->
+            <thead>
+              <tr class="bg-[var(--primary)] text-white">
+                <th colspan="5" class="px-4 py-3 text-left font-bold text-base">
+                  Đặt Xe
+                </th>
+              </tr>
+              <tr class=" bg-[var(--primary-light)] text-black font-semibold">
+                <th class="px-3 py-2 text-left">Cước phí</th>
+                <th class="px-3 py-2">Giá cước tối thiểu 2km đầu tiên</th>
+                <th class="px-3 py-2">Giá cước mỗi km tiếp theo</th>
+                <th colspan="2" class="px-3 py-2">Giá cước tính theo thời gian di chuyển (sau 2km đầu tiên)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[var(--border)]">
+              <tr>
+                <td class="px-3 py-2 text-left font-medium">1 chiều</td>
+                <td>12.000đ</td>
+                <td>3.800đ/km</td>
+                <td colspan="2" class="text-center">350đ/phút</td>
+              </tr>
+
+              <tr>
+                <td class="px-3 py-2 text-left font-medium">2 chiều</td>
+                <td>10.000đ</td>
+                <td>2.800đ/km</td>
+                <td colspan="2" class="text-center">300đ/phút</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>   
+    </div>   
+    <!-- ================= FOOTER ================= -->
+    <footer id="contact" class="px-6 pt-24 pb-12">
+      <div class="max-w-7xl mx-auto footer-flat rounded-[2.5rem] p-12">
+        <div class="grid md:grid-cols-3 gap-10 mb-10">
+          <div>
+            <h3 class="font-extrabold uppercase mb-3 text-lg">
+              Vinfast <span class="text-primary">Limo Green</span>
+            </h3>
+            <p class="text-sub leading-relaxed">
+              Dịch vụ xe điện cao cấp tại Cần Thơ.<br />
+              Êm ái – Sang trọng – Thân thiện môi trường.
+            </p>
+          </div>
+          <div>
+            <p class="font-bold mb-3">Liên hệ</p>
+            <p class="text-sub"><i class="fa-solid fa-phone mr-2"></i>09 xxx xxx</p>
+            <p class="text-sub">
+              <i class="fa-solid fa-location-dot mr-2"></i>Cần Thơ & các tỉnh lân cận
+            </p>
+            <p class="text-sub">
+              <i class="fa-solid fa-clock mr-2"></i>Phục vụ 24/7
+            </p>
+          </div>
+          <div class="md:text-right">
+            <p class="font-bold mb-3">Sẵn sàng cho chuyến đi?</p>
+            <button class="hero-btn" onclick="showForm('booking')">
+              ĐẶT XE NGAY
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-[var(--border)] pt-6 text-center text-xs text-sub"
+        >
+          © 2026 Vinfast Limo Green · Luxury Electric Travel
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
