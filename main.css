@@ -8,7 +8,7 @@
   --primary-light: #d1fd9c; 
   --dark-green: #394408;
   --border: rgba(255, 255, 255, 0.15);
-  --primary-text-form: #ffffff;
+  --primary-text-form: #000;
   --border-form: rgba(255, 255, 255, 0.15);
   --bg-form: rgba(255, 255, 255);
   --overlay: rgba(0, 0, 0, 0.65);
@@ -19,6 +19,7 @@
   --text-title: #000;
   --text-sub: #555;
   --border: rgba(0, 0, 0, 0.12);
+  --primary-text-form: #ffffff;
   --border-form: #fff;
   --bg-form: rgba(0, 0, 0);
   --overlay: rgba(0, 0, 0, 0.053);
@@ -357,7 +358,7 @@ body {
   padding: 20px 22px;
   font-size: 1rem;
   border-radius: 16px;
-  background: rgba(62, 59, 59, 0.236);
+  /* background: rgba(62, 59, 59, 0.236); */
   color: var(--primary-text-form);
   outline: none;
   object-fit: cover;
