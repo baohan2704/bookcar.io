@@ -48,12 +48,15 @@ body {
 
 /* ================= GLASS CONTAINER ================= */
 .header-flat,
-.footer-flat,
 .form-container-flat {
   background: var(--card);
   backdrop-filter: blur(18px);
   border: 1px solid var(--border);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.footer-flat {
+  backdrop-filter: blur(18px);
 }
 
 /* ================= SPOTLIGHT ================= */
